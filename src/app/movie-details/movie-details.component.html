@@ -1,0 +1,43 @@
+<div class="container">
+  <div id="content1">
+    <div class="largeImg">
+      <img
+        src="https://image.tmdb.org/t/p/w300/{{ movieImg }}"
+        onerror="this.src= '../../assets/images/default-movie.png';"
+        alt="movieImage"
+      />
+    </div>
+    <div class="movieWord">
+      <h1>
+        {{ original_title }}
+      </h1>
+      <h3>
+        {{ overviews }}
+      </h3>
+      <br />
+      <h5>Popularity: {{ popularities }}</h5>
+    </div>
+  </div>
+  <div id="content2">
+    <div class="card" style="width: 18rem" *ngFor="let cast of casts">
+      <img
+        src="https://image.tmdb.org/t/p/w500/{{ cast.profile_path }}"
+        onerror="this.src= '../../assets/images/default-movie.png';"
+        alt="castImage"
+      />
+      <div class="card-body">
+        <p class="card-text">{{ cast.original_name }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="btn">
+    <button
+      mat-mini-fab
+      aria-label="Example icon button with a home icon"
+      color="warn"
+      routerLink="home"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+</div>

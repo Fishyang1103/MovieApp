@@ -1,0 +1,17 @@
+<header>
+  <div id="drop-down">
+    <div class="search">
+      <input
+        [(ngModel)]="keyword"
+        type="text"
+        placeholder="Search"
+        id="search"
+        class="search"
+      />
+      <button mat-flat-button color="primary" (click)="doSearch($event)">
+        Search
+      </button>
+      <!-- {{ keyword }} -->
+    </div>
+  </div>
+</header>
